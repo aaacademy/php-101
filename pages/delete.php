@@ -5,7 +5,7 @@ $id = @$_GET['id'];
 if (!$id) {
     setFlash("Failed for delete news", "alert alert-danger");
     header('Location: /');
-} else ($id) { 
+} else { 
     $sql = "DELETE FROM news WHERE id=?";
     $stmt= $connection->prepare($sql);
     $stmt->execute([$id]);
